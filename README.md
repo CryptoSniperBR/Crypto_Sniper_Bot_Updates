@@ -31,7 +31,7 @@ Pick the file for **your system**. Desktop builds **update themselves** — you 
 | System | What you get | Download |
 |---|---|---|
 | 🪟 **Windows** 10/11 | Installer `.exe` | **[⬇️ Download for Windows](https://github.com/CryptoSniperBR/Crypto_Sniper_Bot_Updates/releases/latest)** |
-| 🤖 **Android** 7.0+ | Mobile app `.apk` | **[⬇️ Download for Android](https://github.com/CryptoSniperBR/Crypto_Sniper_Bot_Updates/releases/latest)** |
+| 🤖 **Android** 7.0+ · **beta** | Mobile app `.apk` — [read this first](#-security) | **[⬇️ Download for Android](https://github.com/CryptoSniperBR/Crypto_Sniper_Bot_Updates/releases/latest)** |
 | 🍎 **macOS** — Apple Silicon | Installer `.dmg` | **[⬇️ Download for Mac (M1–M4)](https://github.com/CryptoSniperBR/Crypto_Sniper_Bot_Updates/releases/latest)** |
 | 🍎 **macOS** — Intel | Installer `.dmg` | **[⬇️ Download for Mac (Intel)](https://github.com/CryptoSniperBR/Crypto_Sniper_Bot_Updates/releases/latest)** |
 | 🐧 **Linux** — any distro | Portable `.AppImage` | **[⬇️ Download AppImage](https://github.com/CryptoSniperBR/Crypto_Sniper_Bot_Updates/releases/latest)** |
@@ -99,14 +99,16 @@ sudo dpkg -i CryptoSniper-*.deb
 
 ---
 
-## 🔐 Security — your keys never leave your machine
+## 🔐 Security
 
-**100% non-custodial.** Your private key is encrypted at rest on **your own computer** and is never transmitted to us. We have no server that can touch your funds, because there is nothing to touch.
+**On desktop (Windows · macOS · Linux) the bot is non-custodial.** Your private key is encrypted at rest on **your own computer**, using your operating system's own secure storage, and is never transmitted to us.
 
-- 🔑 **Local-only keys** — encrypted at rest, never uploaded
+- 🔑 **Desktop: local-only keys** — encrypted at rest by the OS keychain, never uploaded
 - 🧪 **Sell-simulation before every buy** — honeypots get rejected up front, not discovered too late
 - 🛡️ **MEV-protected routing** — your trade isn't dangled in front of sandwich bots
 - 📖 **Verifiable trades** — every transaction is a normal on-chain tx you can audit yourself
+
+> ⚠️ **Mobile works differently.** The Android app is a **beta** client for our **hosted trading engine** — it does not run the engine on your phone. Trades are executed server-side, so the mobile flow is **not** non-custodial in the way the desktop app is. **If self-custody matters to you, use the desktop app.**
 
 ---
 
